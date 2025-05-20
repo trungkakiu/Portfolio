@@ -1,0 +1,331 @@
+.HomePagecontents{
+    margin-top: 55px;
+    align-items: center;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    @media (min-width: 1024px){
+        
+    .PageTopic{
+        background-image: url('../../image/reactbgr.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        overflow: hidden;
+        color: white; 
+        padding-bottom: 20px;
+        padding-top: 20px;
+        border-bottom: 3px solid  rgb(29, 210, 255);
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Độ tối phù hợp */
+            z-index: 0;
+        }
+            .Avatar{
+                padding: 10px;
+                position: relative;
+                margin-top: 20px;
+                margin-left: 5%;
+                user-select: none;
+                width: 30%;
+                img{
+                    transition: transform 0.2s ease;
+                    cursor: pointer;
+                }   
+                .img-01{
+                    transform: rotate(-5deg) translateX(-20px);
+                    position: absolute;
+                    border-radius: 15px;
+                    z-index: 0;
+                    box-shadow: 0 10px 20px rgba(0, 200, 255, 0.3), 
+                    0 6px 6px rgba(0, 72, 116, 0.3);
+                    opacity: 1;
+                    border: 4px solid rgb(0, 72, 116);
+                }
+                .img-02{
+                    position: absolute;
+                    border-radius: 15px;
+                    z-index: 0;
+                    opacity: 1;
+                    border: 4px solid rgb(0, 72, 116);
+                    box-shadow: 0 10px 20px rgba(0, 200, 255, 0.3), 
+                    0 6px 6px rgba(0, 72, 116, 0.3);
+                    transform: rotate(5deg) translateX(20px);
+                    
+                }
+                .top-img{
+                    border-radius: 15px;
+                    position: relative;
+                    z-index: 2;
+                    box-shadow: 0 10px 20px rgba(0, 200, 255, 0.3), 
+                    0 6px 6px rgba(0, 72, 116, 0.3);
+                    border: 4px solid rgb(0, 72, 116);
+                }
+                &:hover {
+                    .img-01 {
+                    transform: rotate(-7deg) translateX(-30px);
+                    }
+                    .img-02 {
+                    transform: rotate(7deg) translateX(30px);
+                    }
+                }
+            }
+
+            .Info{
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                width: 60%;
+                .info-box{
+                    color: white;
+                    position: relative;
+                    margin-top: 30px;
+                    padding: 10px;
+                    .Name{
+                
+                        font-size: 30px;
+                    }
+
+                    .dev-rol{
+                        color: rgb(29, 210, 255);
+                    }
+                    .btn_show{
+                        text-align: center;
+                        align-items: center;
+                        margin-top: 10%;
+                        height: 50px;
+                        margin-right: 20px;
+                        width: 40%;
+                        cursor: pointer;
+                        border-radius: 20px;
+                        background-color: white;
+                        box-shadow: 0 10px 20px rgba(0, 200, 255, 0.3), 
+                        0 6px 6px rgba(0, 72, 116, 0.3);
+
+                        span{
+                            
+                            position: relative;
+                            display: block;
+                            color: black;
+                        }
+
+                    }
+
+                    .btn_show {
+                        position: relative;
+                        display: inline-block;
+                        overflow: hidden; 
+                        user-select: none;
+                        font-family: Georgia, 'Times New Roman', Times, serif;
+                        transition: transform 0.2s ease;
+                        span {
+                            position: relative;
+                            padding: 8%;
+                            z-index: 2;
+                            font-size: 20px;
+                            font: 1em sans-serif;
+                            transition: color 0.2s ease;
+                            p{
+                                font-weight: 600;
+                            }
+                        }
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            width: 300px;
+                            height: 300px;
+                            background-color: rgb(255, 85, 12);
+                            border-radius: 50%;
+                            transform: translate(-50%, -50%) scale(0);
+                            transition: transform 0.4s ease;
+                            z-index: 1;
+                        }
+
+                        &:hover::before {
+                            transform: translate(-50%, -50%) scale(1);
+                        }
+
+                        &:hover span {
+                            color: white;
+                        }
+
+                        &:hover{
+                            transform: scale(1.05);
+                        }
+                    }
+
+                    .btn_hide{
+                        text-align: center;
+                        align-items: center;
+                        margin-top: 10%;
+
+                        height: 50px;
+                        width: 40%;
+                        cursor: pointer;
+                        border-radius: 20px;
+                        background-color: white;
+                        box-shadow: 0 10px 20px rgba(0, 200, 255, 0.3), 
+                        0 6px 6px rgba(0, 72, 116, 0.3);
+
+                        span{
+                            position: relative;
+                            display: block;
+                            color: black;
+                        }
+
+                    }
+
+                    .btn_hide {
+                        position: relative;
+                        display: inline-block;
+                        overflow: hidden; 
+                        user-select: none;
+                        transition: transform 0.2s ease;
+                        span {
+                            position: relative;
+                            padding: 8%;
+                            z-index: 2;
+                            font-size: 20px;
+                            font: 1em sans-serif;
+                            transition: color 0.2s ease;
+                            p{
+                                font-weight: 600;
+                            }
+                        }
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                             width: 300px;
+                            height: 300px;
+                            background-color: rgb(255, 85, 12);
+                            border-radius: 50%;
+                            transform: translate(-50%, -50%) scale(0);
+                            transition: transform 0.4s ease;
+                            z-index: 1;
+                        }
+
+                        &:hover::before {
+                            transform: translate(-50%, -50%) scale(1);
+                        }
+
+                        &:hover span {
+                            color: white;
+                        }
+
+                        &:hover{
+                            transform: scale(1.05);
+                        }
+                    }
+
+
+                    @media (min-width: 1350px){
+                        .skill-box {
+                            width: 45%;
+                            .skil-icon{
+                            display: flex;
+                            position: absolute;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            top: -40%;
+                            left: 580px;
+                                .boder{
+                                    padding: 5px;
+                                    border-radius: 15px;
+                                    width: 45%;
+                                    padding: 0.5rem;
+                                    display: flex;
+                                    justify-content: center;
+                                    .skill {
+                                        background: linear-gradient(
+                                            270deg,
+                                            red,
+                                            orange,
+                                            yellow,
+                                            green,
+                                            cyan,
+                                            blue,
+                                            indigo,
+                                            violet,
+                                            red
+                                        );
+                                        background-size: 300% 300%;
+                                        animation: rainbowMove 10s linear infinite;
+                                        padding: 2.5px;
+                                        border-radius: 10px;
+                                        width: 6.5rem;
+                                        height: 6.5rem;
+                                        display: flex;
+                                        object-fit: cover;
+                                        justify-content: center;
+                                        align-items: center;
+                                        cursor: pointer;
+                                        user-select: none;
+                                        transition: transform 0.2s ease;
+                                        margin-bottom: 15px;
+                                        &:hover{
+                                            transform: scale(1.1);
+                                        }
+                                        @keyframes rainbowMove {
+                                            0% {
+                                                background-position: 0% 50%;
+                                            }
+                                            50% {
+                                                background-position: 50% 75%;
+                                            }
+                                            100% {
+                                                background-position: 75% 100%;
+                                            }
+                                        }
+                                        
+                                        
+                                    }
+
+                                }
+                                
+                            }
+                            
+                        }
+                    }
+
+                }
+                .social-box{
+                    padding: 10px;
+                    position: relative;
+                    z-index: 1;
+                    width: 100%;
+                    text-align: center;
+                    align-items: center;
+                    margin-left: 15%;
+                    gap: 30px;
+                    cursor: pointer;
+                    color: rgb(29, 210, 255);
+                    margin-top: 30px;
+                    font-size: 30px;
+                    .icon{
+                        transition: transform 0.2s ease, color 0.2s ease;
+                        &:hover{
+                            transform: scale(1.2);
+                            color: rgb(17, 122, 149);
+                        }
+                    }
+                
+                }
+            }
+            
+        }
+    }
+    @media ((max-width: 1023px) and (min-width: 740px)){}
+    @media (max-width: 739px){
+
+    }
+
+}
