@@ -25,13 +25,35 @@ const HomePage = () =>{
 
     AOS.refresh();
     }, []);
+
+    useEffect(() => {
+    AOS.init({ once: true, offset: 100 });
+    AOS.refresh();
+
+    const glow = document.querySelector(".cursor-glow");
+    const handleMouseMove = (e) => {
+        if (glow) {
+        glow.style.top = `${e.clientY}px`;
+        glow.style.left = `${e.clientX}px`;
+        }
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+        document.removeEventListener("mousemove", handleMouseMove);
+    };
+    }, []);
+
+
     return(
         <div className="HomePagecontents">
+            <div className="cursor-glow">
             <section className='PageTopic d-flex'>
                 <div data-aos="zoom-in" data-aos-duration="1000" className='Avatar' >
-                    <img src={Avatar} style={{width: "19 rem" , height: "25rem"}} className='img-01'/>
-                    <img src={Avatar} style={{width: "18 rem" , height: "25rem"}} className='img-02'/>
-                    <img src={Avatar} style={{width: "18 rem" , height: "25rem"}} className='top-img'/>
+                    <img src={Avatar} alt="Avatar" style={{width: "19 rem" , height: "25rem"}} className='img-01'/>
+                    <img src={Avatar} alt="Avatar" style={{width: "18 rem" , height: "25rem"}} className='img-02'/>
+                    <img src={Avatar} alt="Avatar" style={{width: "18 rem" , height: "25rem"}} className='top-img'/>
                 </div>
                 <div className='Info'>
                     <div className='social-box d-flex'>
@@ -79,6 +101,8 @@ const HomePage = () =>{
             <section className='project-part'>
                 <ProjectPart/>
             </section>
+            </div>
+
         </div>
     )
 }

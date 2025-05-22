@@ -3,7 +3,6 @@
     align-items: center;
     font-family: 'Be Vietnam Pro', sans-serif;
     @media (min-width: 1024px){
-        
     .PageTopic{
         background-image: url('../../image/reactbgr.png');
         background-size: cover;
@@ -21,7 +20,7 @@
             position: absolute;
             top: 0; left: 0;
             width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Độ tối phù hợp */
+            background: linear-gradient(to right, #010e13cf, #03192bce, #01151bc3); 
             z-index: 0;
         }
             .Avatar{

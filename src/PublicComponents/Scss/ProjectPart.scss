@@ -1,12 +1,12 @@
 .Project-contents{
     width: 100%;
-    height: 500px;
-    background-color: #111014;
-
-
+    background: linear-gradient(to right, #01131a, #021423, #01151b);
+    min-height: 100vh;
     .Hero-banner{
         gap: 14px;
         padding: 10px;
+        border-bottom: 3px solid  rgb(29, 210, 255);
+
         .banner{
             display: flex;
             position: relative;
@@ -14,7 +14,7 @@
             .item{
                 border-radius: 10px;
                 width: 18rem;
-                height: 10rem;
+                height: 11rem;
             }
 
             .topic{
@@ -46,6 +46,104 @@
                     opacity: 1;
                     transform: scale(1.05);
                 }
+            }
+        }
+    }
+
+    .Topic-Body{
+        display: flex;
+        background: linear-gradient(to right, #01131a, #03192b, #010b1b);
+        .left{
+            width: 45%;
+            top: 20px;
+            position: sticky;
+            z-index: 2;
+            align-self: flex-start;
+            padding: 1rem;
+            color: rgb(29, 210, 255);
+            .top-left{
+                padding: 8rem;
+                h1{
+                    color: white;
+                    font-size: 600;
+                }
+                h3{
+                    font-size: 500;
+                    
+                }
+                p{
+                    color: #758b94;
+                }
+            }
+
+            .bar-left{
+                padding-left: 8rem;
+                .Bar{
+                    display: flex;
+                    color: #758b94;
+                    width: 40%;
+                    position: relative;
+                    transition: transform 0.2s ease, color 0.2s ease;
+                    cursor: pointer;
+                    user-select: none;
+
+                    .dec{
+                    position: absolute;
+                    bottom: 5px;
+                    transition: transform 0.2s ease, color 0.2s ease;
+                    }
+
+                    .disdec{
+
+                        margin-left: 70px;
+                        transition: transform 0.2s ease, color 0.2s ease;
+                    }
+
+                    &:hover{
+                        color: #ffffff;
+                        .dec{
+                            transform: translateX(10px) scaleX(1.2);
+                        }
+                        .disdec{
+                            transform: translateX(20px) scale(1.1);
+                        }
+                        
+                    }
+                }
+
+                .Bar-active{
+                    display: flex;
+                    color: #ffffff;
+                    position: relative;
+                    .dec{
+                    position: absolute;
+                    bottom: 5px;
+                    transform: scaleX(1.2) translateX(8px);
+                    }
+
+                    .disdec{
+                        transform: translateX(15px);
+                        margin-left: 70px;
+                    }
+                }
+            }
+
+
+        }
+
+        .right{
+            width: 55%;
+            min-height: 200vh;
+            padding: 1rem;
+            color: rgb(29, 210, 255);
+        }
+        @media (max-width: 768px) {
+
+            flex-direction: column;
+            .left, .right {
+            width: 100%;
+            height: auto;
+            position: relative;
             }
         }
     }
