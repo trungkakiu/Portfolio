@@ -64,8 +64,8 @@ const ProjectPart = (props) => {
                     </span>
                 </div>
             </div>
-            <div className="Topic-Body">
-                <div className="left">
+            <div  className="Topic-Body">
+                <div data-aos="fade-right" className="left">
                     <div className="top-left">
                         <h1>DO DANG CHUNG</h1>
                         <h3>Full stack developer</h3>

@@ -3,14 +3,18 @@ import { NavLink } from 'react-router-dom';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import '../PublicComponents/Scss/Nav.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faHome } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faHome, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 import { LanguageContext } from '../Context/Language-context';
+import { UserContext } from '../Context/User-context';
 
 const NavBar = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const { dictionary, changeLanguage } = useContext(LanguageContext);
+  const { User, login, logout } = useContext(UserContext);
+
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -42,11 +46,21 @@ const NavBar = () => {
           <div className='bar'>
               <p>My Blog</p>
           </div>
-            <div>
-            <button onClick={() => changeLanguage("vi")}>VI</button>
-            <button onClick={() => changeLanguage("en")}>EN</button>
+
+          <div className='Acount-box'>
+              {User.Authen ? (
+                <>
+                </>
+              ) : (
+                <>
+                  <div className='login-btn'>
+                      <FontAwesomeIcon icon={faRightFromBracket} className='signinIcon'/>
+                  </div>
+                </>
+              )}
           </div>
       </div>
+
     </div>
   );
 };

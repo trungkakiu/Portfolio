@@ -11,10 +11,8 @@ function App() {
  return (
   <div>
     <BrowserRouter>
-      <LanguageProvider>
         <Nav/>
         <PublicRoutes />
-      </LanguageProvider> 
     </BrowserRouter>
 
   </div>
