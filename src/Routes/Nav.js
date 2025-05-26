@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext, useMemo } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import '../PublicComponents/Scss/Nav.scss';
@@ -7,13 +7,18 @@ import { faBars, faHome, faRightFromBracket } from '@fortawesome/free-solid-svg-
 import { motion } from 'framer-motion';
 import { LanguageContext } from '../Context/Language-context';
 import { UserContext } from '../Context/User-context';
+import AuthenModal from '../PublicComponents/Modal/Authenticate-modal'
+
 
 const NavBar = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const { dictionary, changeLanguage } = useContext(LanguageContext);
   const { User, login, logout } = useContext(UserContext);
-
+  const ModalDefault = {
+    AuthenState: false
+  }
+  const [ModalState, setModalState] = useState(ModalDefault);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,8 +35,21 @@ const NavBar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
+
+  const OpenModal = (code) =>{
+      if(code === "Authen"){
+        setModalState((prev) => ({...prev, AuthenState: true}))
+      }
+  }
+  const CloseModal = (code) =>{
+      if(code === "Authen"){
+        setModalState((prev) => ({...prev, AuthenState: false}))
+      }
+  }
+
   return (
     <div className={`Headerbar ${isVisible ? 'visible' : 'hidden'}`}>
+      <AuthenModal show={ModalState.AuthenState} close = {()=> CloseModal("Authen")}/>
       <div className='bar-topic d-flex'>
           <div className='bar '>
             <div className='d-flex'>
@@ -54,7 +72,7 @@ const NavBar = () => {
               ) : (
                 <>
                   <div className='login-btn'>
-                      <FontAwesomeIcon icon={faRightFromBracket} className='signinIcon'/>
+                      <FontAwesomeIcon onClick={()=>OpenModal("Authen")} icon={faRightFromBracket} className='signinIcon'/>
                   </div>
                 </>
               )}

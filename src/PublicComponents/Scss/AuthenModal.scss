@@ -1,0 +1,84 @@
+
+.modal-backdrop-custom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+.modal-container-custom {
+    
+    background: linear-gradient(135deg, #112d4ef7, #3a506bf9);
+    padding: 2rem;
+    border-radius: 5px;
+    width: 500px;
+    max-width: 90%;
+    height: 600px;
+    box-shadow:
+    0 0 2px #00ffff66,
+    0 0 5px #00ffff44,
+    0 0 10px #00ffff22,
+    0 0 20px #00ffff11;
+    border: 2px solid #00ffff;
+
+    &:hover{
+        animation: glowPulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes glowPulse {
+    0% {
+        box-shadow:
+            0 0 2px #00ffff66,
+            0 0 5px #00ffff44,
+            0 0 10px #00ffff22,
+            0 0 20px #00ffff11;
+    }
+    50% {
+        box-shadow:
+            0 0 4px #00ffff88,
+            0 0 8px #00ffff66,
+            0 0 15px #00ffff44,
+            0 0 30px #00ffff22;
+    }
+    100% {
+        box-shadow:
+            0 0 2px #00ffff66,
+            0 0 5px #00ffff44,
+            0 0 10px #00ffff22,
+            0 0 20px #00ffff11;
+    }
+}
+
+
+    .Login-modal{
+        height: 100%;
+        .Topic-baner{
+            height: 40%;
+            text-align: center;
+            align-items: center;
+            user-select: none;
+            .Avatar{
+                width: 8.5rem;
+                border: 5px solid rgb(179, 179, 179);
+                border-radius: 50%;
+                height: 8.5rem;
+            }
+
+            .Text-topic{
+                font-size: 22px;
+                color: white;
+                margin-top: 1rem;
+            }
+        }
+
+        .Login-form{
+            height: 100 - 40%;
+        }
+    }
+}
