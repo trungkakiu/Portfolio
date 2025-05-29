@@ -79,6 +79,326 @@
 
         .Login-form{
             height: 100 - 40%;
+            .username{
+                border-bottom: 3px solid rgb(0, 221, 255);
+                padding-bottom: 1rem;
+                width: 90%;
+                position: relative;
+                margin-left: 5%;
+                .icon{
+                    color: white;
+                    font-size: 30px;
+                }
+                input{
+                    position: absolute;
+                    background-color: #00ffff00;
+                    border: 1px;
+                    width: 300px;
+                    top: 5px;
+                    left: 40px;
+                    font-size: 20px;
+                    color: white;
+                    outline: none;
+                    height: 30px;
+                }
+
+                label{
+                    user-select: none;
+                    position: absolute;
+                    color: rgb(152, 152, 152);
+                    font-size: 20px;
+                    left: 40px;
+                    top: -30px;
+                }
+
+                
+            }
+
+            .password{
+                margin-top: 50px;
+                margin-left: 5%;
+                position: relative;
+                width: 90%;
+                border-bottom: 3px solid rgb(0, 221, 255);
+                padding-bottom: 1rem;
+                .icon{
+                    color: white;
+                    font-size: 30px;
+                    user-select: none;
+                }
+
+                input{
+                    position: absolute;
+                    background-color: #00ffff00;
+                    border: 1px;
+                    width: 300px;
+                    top: 5px;
+                    left: 40px;
+                    font-size: 20px;
+                    outline: none;
+                    color: white;
+                    height: 30px;
+                }
+
+                label{
+                    user-select: none;
+                    position: absolute;
+                    color: rgb(152, 152, 152);
+                    font-size: 20px;
+                    left: 40px;
+                    top: -30px;
+                }
+
+            } 
+
+            .btn-login{
+                width: 90%;
+                border-radius: 10px;
+                margin-top: 2rem;
+                font-size: 20px;
+                font-weight: 600;
+                margin-left: 5%;
+                background-color: white;
+                transition: transform 0.2s ease;
+
+                &:hover{
+                    transform: scale(1.03);
+                }
+            }
+            .btn-Load{
+                width: 90%;
+                border-radius: 10px;
+                margin-top: 2rem;
+                font-size: 20px;
+                cursor: not-allowed;
+                font-weight: 600;
+                margin-left: 5%;
+                background-color: rgb(92, 92, 92);
+                transition: transform 0.2s ease;
+
+                &:hover{
+                    transform: scale(1.03);
+                }
+            }
+
+            .Option{
+                width: 90%;
+                margin-top: 1rem;
+                margin-left: 5%;
+                position: relative;
+                user-select: none;
+                .showPass{
+                    input{
+                        width: 1.2rem;
+                    }
+                    label{
+                        color: rgb(156, 156, 156);
+                        margin-left: 10px;
+                    }
+                }
+
+                .forgotPass{
+                    position: absolute;
+                    color: rgb(156, 156, 156);
+                    right: 0;
+                }
+            }
+
+            .Other-option{
+                width: 100%;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                margin-top: 1rem;
+                font-size: 35px;
+                gap: 20px;
+                
+
+                .icon{
+                    cursor: pointer;
+                    transition: transform 0.2s ease, color 0.3s ease;
+                    &:hover{
+                        color: whitesmoke;
+                        transform: scale(1.1);
+                    }
+                }  
+            }
+
+            .Register-link{
+                width: 90%;
+                margin-left: 5%;
+                text-align: center;
+                color: white;
+                user-select: none;
+                cursor: pointer;
+            }
         }
+
+        
     }
+
+    .Register-part{
+         height: 100%;
+        
+
+        .Register-form{
+            height: 100 - 40%;
+
+            .Topic{
+                padding: 1rem;
+                background-color: white;
+                border-radius: 10px;
+                font-weight: 600;
+                text-align: center;
+                border: 3px solid rgb(142, 142, 142);
+                width: 90%;
+                margin-left: 5%;
+                color: rgb(0, 0, 0);
+            }
+
+            .username{
+                margin-top: 20%;
+                border-bottom: 3px solid rgb(0, 221, 255);
+                padding-bottom: 1rem;
+                width: 90%;
+                position: relative;
+                margin-left: 5%;
+                .icon{
+                    color: white;
+                    font-size: 30px;
+                }
+                input{
+                    position: absolute;
+                    background-color: #00ffff00;
+                    border: 1px;
+                    width: 300px;
+                    top: 5px;
+                    left: 40px;
+                    font-size: 20px;
+                    color: white;
+                    outline: none;
+                    height: 30px;
+                }
+
+                label{
+                    user-select: none;
+                    position: absolute;
+                    color: rgb(152, 152, 152);
+                    font-size: 20px;
+                    left: 40px;
+                    top: -30px;
+                }
+
+                
+            }
+
+            .password{
+                margin-top: 50px;
+                margin-left: 5%;
+                position: relative;
+                width: 90%;
+                border-bottom: 3px solid rgb(0, 221, 255);
+                padding-bottom: 1rem;
+                .icon{
+                    color: white;
+                    font-size: 30px;
+                    user-select: none;
+                }
+
+                input{
+                    position: absolute;
+                    background-color: #00ffff00;
+                    border: 1px;
+                    width: 300px;
+                    top: 5px;
+                    left: 40px;
+                    font-size: 20px;
+                    outline: none;
+                    color: white;
+                    height: 30px;
+                }
+
+                label{
+                    user-select: none;
+                    position: absolute;
+                    color: rgb(152, 152, 152);
+                    font-size: 20px;
+                    left: 40px;
+                    top: -30px;
+                }
+
+            } 
+
+            .btn-register{
+                width: 90%;
+                border-radius: 10px;
+                margin-top: 2rem;
+                font-size: 20px;
+                font-weight: 600;
+                color: white;
+                margin-left: 5%;
+                background-color: orangered;
+                transition: transform 0.2s ease;
+
+                &:hover{
+                    transform: scale(1.03);
+                }
+            }
+
+            .Option{
+                width: 90%;
+                margin-top: 1rem;
+                margin-left: 5%;
+                position: relative;
+                user-select: none;
+                .showPass{
+                    input{
+                        width: 1.2rem;
+                    }
+                    label{
+                        color: rgb(156, 156, 156);
+                        margin-left: 10px;
+                    }
+                }
+
+                .forgotPass{
+                    position: absolute;
+                    color: rgb(156, 156, 156);
+                    right: 0;
+                }
+            }
+
+            .Other-option{
+                width: 100%;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                margin-top: 1rem;
+                font-size: 35px;
+                gap: 20px;
+                
+
+                .icon{
+                    cursor: pointer;
+                    transition: transform 0.2s ease, color 0.3s ease;
+                    &:hover{
+                        color: whitesmoke;
+                        transform: scale(1.1);
+                    }
+                }  
+            }
+
+            .Login-link{
+                width: 90%;
+                margin-left: 5%;
+                text-align: center;
+                color: white;
+                user-select: none;
+                cursor: pointer;
+            }
+        }
+
+        
+    }
+    
 }

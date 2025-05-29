@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import '../PublicComponents/Scss/Nav.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faHome, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faCircleUser, faHome, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 import { LanguageContext } from '../Context/Language-context';
 import { UserContext } from '../Context/User-context';
@@ -51,6 +51,9 @@ const NavBar = () => {
     <div className={`Headerbar ${isVisible ? 'visible' : 'hidden'}`}>
       <AuthenModal show={ModalState.AuthenState} close = {()=> CloseModal("Authen")}/>
       <div className='bar-topic d-flex'>
+          <div className='BarPhone'>
+               
+          </div>
           <div className='bar '>
             <div className='d-flex'>
               <FontAwesomeIcon icon={faHome} className='icon-A01'/>
@@ -68,6 +71,13 @@ const NavBar = () => {
           <div className='Acount-box'>
               {User.Authen ? (
                 <>
+                <div className='Acount'>
+                    <span>
+                       {User.data.UserName}
+                    </span>
+                    <FontAwesomeIcon className='icon' icon={faCircleUser}/>
+                </div>
+               
                 </>
               ) : (
                 <>

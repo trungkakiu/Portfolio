@@ -3,7 +3,6 @@ import { createContext, useState, useEffect } from "react";
 export const UserContext = createContext();
 const defaultUserStatus = {
   Authen: false,
-  token: "",
   data: []
 };
 
@@ -20,10 +19,9 @@ export const UserProvider = ({ children }) => {
   };
   const [User, setUser] = useState(() => getInitialUser());
 
-  const login = async (userData, token) => {
+  const login = async (userData) => {
     const newUser = {
       Authen: true,
-      token: token,
       data: userData
     };
     setUser(newUser);
